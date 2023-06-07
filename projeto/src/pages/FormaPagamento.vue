@@ -7,7 +7,7 @@
 
       <div class="row fixed-center" id="tamanho">
         <div class="col-1" >
-            <q-btn to="/pagamento" class="col" id="button3" >
+            <q-btn to="/dinheiro" class="col" id="button3" >
                 <img id="img" src="../assets/icons8-dinheiro-90.png"/>
             </q-btn>
             
@@ -16,12 +16,9 @@
        <div class="col-6" id="espaco"></div>
 
         <div class="col-1">
-            <q-btn to="/pagamento" class="col" id="button3" >
+            <q-btn to="/debito" class="col" id="button3" >
                 <img id="img" src="../assets/icons8-cartão-100.png"/>
             </q-btn>
-            <div>
-            <h6 id="text2" class="row">cartao</h6>
-            </div>
         </div>
       </div>
 
@@ -54,6 +51,7 @@ img{
   color: white;
   padding-left: 10vw;
   padding-right: 10vw;
+  text-align: center;
  
 }
 #text{

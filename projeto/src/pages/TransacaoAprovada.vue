@@ -1,14 +1,17 @@
 <template>
     <q-page class="absolute-center">
         <div>
-        <h3 id="text">CONSULTANDO SALDO</h3>
+        <h3 id="text">TRANSAÇÃO APROVADA</h3>
+        </div>
+        <div>
+        <h3 id="text">IMPRIMINDO COMPROVANTE</h3>
         </div>
 
         <div class="fixed-center">
-         <img src="../assets/icons8-quadro-giratório-5-90.png"/>
+         <img src="../assets/icons8-selecionado-100.png"/>
         </div>
 
-        <q-btn to="/servicos" class="fixed-bottom">avancar</q-btn>
+        <q-btn to="/final" class="fixed-bottom">avancar</q-btn>
 
     </q-page>
   </template>
@@ -18,7 +21,7 @@
   
   
   export default defineComponent({
-    name: 'ConsultarSaldo'
+    name: 'TransacaoAprovada'
   })
   </script>
   

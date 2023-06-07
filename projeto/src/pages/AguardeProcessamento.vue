@@ -1,14 +1,14 @@
 <template>
     <q-page class="absolute-center">
         <div>
-        <h3 id="text">CONSULTANDO SALDO</h3>
+        <h3 id="text">AGUARDE O PROCESSAMENTO</h3>
         </div>
 
         <div class="fixed-center">
          <img src="../assets/icons8-quadro-giratório-5-90.png"/>
         </div>
 
-        <q-btn to="/servicos" class="fixed-bottom">avancar</q-btn>
+        <q-btn to="/aprovado" class="fixed-bottom">avancar</q-btn>
 
     </q-page>
   </template>
@@ -18,7 +18,7 @@
   
   
   export default defineComponent({
-    name: 'ConsultarSaldo'
+    name: 'AguardeProcessamento'
   })
   </script>
   

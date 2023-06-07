@@ -42,7 +42,48 @@ const routes = [
       { path: '', component: () => import('pages/FormaPagamento.vue') }
     ]
   },
-  
+  {
+    path: '/processamento',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/AguardeProcessamento.vue') }
+    ]
+  },
+  {
+    path: '/dinheiro',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/DinheiroSelecionado.vue') }
+    ]
+  },
+  {
+    path: '/aprovado',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/TransacaoAprovada.vue') }
+    ]
+  },
+  {
+    path: '/debito',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/CartaoSelecionado.vue') }
+    ]
+  },
+  {
+    path: '/senha',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/DigiteSenha.vue') }
+    ]
+  },
+  {
+    path: '/final',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/PaginaFinal.vue') }
+    ]
+  },
   // Always leave this as last one,
   // but you can also remove it
   {
