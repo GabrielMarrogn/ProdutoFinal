@@ -7,17 +7,17 @@
 
       <div class="row fixed-center">
         <div class="col-1" >
-            <q-btn to="/pagamento" class="col" id="button2" >R$5,00</q-btn>
-            <q-btn to="/pagamento" class="col" id="button2" >R$10,00</q-btn>
-            <q-btn to="/pagamento" class="col" id="button2" >R$20,00</q-btn>
+            <q-btn to="/pagamento" id="button2" >R$5,00</q-btn>
+            <q-btn to="/pagamento" id="button2" >R$10,00</q-btn>
+            <q-btn to="/pagamento" id="button2" >R$20,00</q-btn>
         </div>
 
        <div class="col-2" id="espaco"></div>
 
         <div class="col-1">
-            <q-btn to="/pagamento" class="col" id="button2" >R$50,00</q-btn>
-            <q-btn to="/pagamento" class="col" id="button2" >R$100,00</q-btn>
-            <q-btn to="/page2" class="col" id="button2" >Outro Valor</q-btn>
+            <q-btn to="/pagamento" id="button2" >R$50,00</q-btn>
+            <q-btn to="/pagamento" id="button2" >R$100,00</q-btn>
+            <q-btn to="/page2" id="button2" >Outro Valor</q-btn>
         </div>
       </div>
 

@@ -2,14 +2,18 @@ import { defineStore } from 'pinia';
 
 export const useStore = defineStore('AppStore', {
   state: () => ({
-    produto: [],
+    produto: "",
   }),
   actions: {
-    setProduto(prod){
-        this.produto = prod;
+    setProduto(produto){
+        this.produto = produto;
+        console.log("salvou")
+        console.log(produto)
     },
-    getProduto(){
-        return this.produto;
+    getProduto(produto){
+      console.log("mandou")
+      console.log(produto)
+      return this.produto;
     }
     },
   },

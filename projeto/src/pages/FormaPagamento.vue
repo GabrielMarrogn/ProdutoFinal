@@ -5,17 +5,23 @@
         <h3 id="text">ESCOLHA A FORMA DE PAGAMENTO </h3>
       </div>
 
-      <div class="row fixed-center" id="tamanho">
-        <div class="col-1" >
+      <div class="row flex-center" id="tamanho" v-if="produto == 'qrcode'">
+        <div>
+            <q-btn to="/debito" class="col" id="button3" >
+                <img id="img" src="../assets/icons8-cartão-100.png"/>
+            </q-btn>
+        </div>
+      </div>
+
+      <div class="row flex-center" id="tamanho" v-else>
+        <div>
             <q-btn to="/dinheiro" class="col" id="button3" >
                 <img id="img" src="../assets/icons8-dinheiro-90.png"/>
             </q-btn>
             
         </div>
 
-       <div class="col-6" id="espaco"></div>
-
-        <div class="col-1">
+        <div >
             <q-btn to="/debito" class="col" id="button3" >
                 <img id="img" src="../assets/icons8-cartão-100.png"/>
             </q-btn>
@@ -31,10 +37,18 @@
   
   <script>
   import { defineComponent } from 'vue'
+  import { AppStore } from 'src/stores/AppStore'
    
   export default defineComponent({
     name: 'FormaPagamento',
-   
+    data(){
+      return{
+        produto: ""
+      }
+    },
+    created (){
+      this.produto = AppStore.produto
+    },
   })
   </script>
   

@@ -6,16 +6,16 @@
 
   <div class="row absolute-center">
     
-    <q-btn  to="/insira" class="col" id="button"  >
+    <q-btn  to="/insira" class="col" id="button" @click="top" >
           <img src="../assets/logo_top_preto.png"/>
     </q-btn>
    
 
-    <q-btn to="/servicos" class="col" id="button">
+    <q-btn to="/insira" class="col" id="button" @click="qrcode">
           <img src="../assets/qr-code.png"/>
     </q-btn>
 
-    <q-btn to="/insira"  class="col" id="button">
+    <q-btn to="/insira"  class="col" id="button" @click="bilhete">
       <img src="../assets/Bilhete_Unico-logo.png"/>
     </q-btn>
 
@@ -26,10 +26,30 @@
 
 <script>
 import { defineComponent } from 'vue';
+import { AppStore } from '../stores/AppStore'
 
 
 export default defineComponent({
-  name: 'IndexPage'
+  name: 'IndexPage',
+  data(){
+    return{
+    produto: "",
+  }
+  },  created() {},
+  methods: {
+    bilhete(){
+      this.produto = "bilhete"
+      AppStore.setProduto(this.produto)
+    },
+    top(){
+      this.produto = "top"
+      AppStore.setProduto(this.produto)
+    },
+    qrcode(){
+      this.produto = "qrcode"
+      AppStore.setProduto(this.produto)
+    }
+    },
 })
 </script>
 
