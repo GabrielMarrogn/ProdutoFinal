@@ -7,7 +7,7 @@
 
       <div class="row absolute-center" >
     
-       <q-btn to="/cotas" class="col" id="button1" >Comun</q-btn>
+       <q-btn to="/cotas" class="col" id="button1" >COMUN</q-btn>
 
        <q-btn to="/page2" class="col" id="button1" >Estudante</q-btn>
 
