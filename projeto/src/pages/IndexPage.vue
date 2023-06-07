@@ -4,21 +4,36 @@
     <h3 id="text">SELECIONE A OPÇÃO DESEJADA</h3>
     </div>
 
-  <div class="row absolute-center">
-    
-    <q-btn  to="/insira" class="col" id="button" @click="top" >
+  <div class="row flex-center">
+    <div>
+    <q-btn  to="/insira"  id="button" @click="top" >
           <img src="../assets/logo_top_preto.png"/>
     </q-btn>
-   
 
-    <q-btn to="/insira" class="col" id="button" @click="qrcode">
+    <q-btn id="nobutton" class="flex" to="/insira" @click="top">
+      recarga cartão top</q-btn>
+
+    </div>
+
+    <div>
+    <q-btn to="/insira" id="button" @click="qrcode">
           <img src="../assets/qr-code.png"/>
     </q-btn>
 
-    <q-btn to="/insira"  class="col" id="button" @click="bilhete">
+    <q-btn id="nobutton" class="flex" to="/insira" @click="qrcode">
+      qrcode Unitario</q-btn>
+
+    </div>
+
+    <div>
+    <q-btn to="/insira" id="button" @click="bilhete">
       <img src="../assets/Bilhete_Unico-logo.png"/>
     </q-btn>
+    
+    <q-btn id="nobutton" class="flex" to="/insira" @click="bilhete">
+      Recarga bilhete unico</q-btn>
 
+    </div>
   </div>
 
   </q-page>
@@ -54,9 +69,19 @@ export default defineComponent({
 </script>
 
 <style>
+#nobutton{
+  width:  20vw;
+  height: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #0ABBB5;
+  color: white;
+}
 #button{
-  width:  600px;
-  height: 200px;
+  width:  20vw;
+  height: 35vh;
   margin-left: 10px;
   margin-right: 10px;
 }

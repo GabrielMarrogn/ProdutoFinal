@@ -5,27 +5,35 @@
         <h3 id="text">ESCOLHA A FORMA DE PAGAMENTO </h3>
       </div>
 
-      <div class="row flex-center" id="tamanho" v-if="produto == 'qrcode'">
+      <div class="row flex-center"  v-if="produto == 'qrcode'">
         <div>
-            <q-btn to="/debito" class="col" id="button3" >
-                <img id="img" src="../assets/icons8-cartão-100.png"/>
+            <q-btn to="/debito" id="button3" >
+                <img id="img" class="flex-center" src="../assets/icons8-cartão-100.png"/>
             </q-btn>
+
+            <q-btn to="/detito" id="button4" class="flex" >cartão debito</q-btn>
         </div>
       </div>
 
-      <div class="row flex-center" id="tamanho" v-else>
+      <div class="row flex-center"  v-else>
         <div>
-            <q-btn to="/dinheiro" class="col" id="button3" >
-                <img id="img" src="../assets/icons8-dinheiro-90.png"/>
-            </q-btn>
-            
-        </div>
+        <q-btn to="/dinheiro" id="button3">
+          <img id="img"  class="flex-center" src="../assets/icons8-dinheiro-90.png"/>
+        </q-btn>
 
-        <div >
-            <q-btn to="/debito" class="col" id="button3" >
-                <img id="img" src="../assets/icons8-cartão-100.png"/>
-            </q-btn>
+        <q-btn to="/dinheiro" id="button4" class="flex" >dinheiro</q-btn>
+
+        </div>   
+
+        <div>
+        <q-btn to="/debito" id="button3">
+          <img id="img" class="flex-center" src="../assets/icons8-cartão-100.png"/>
+        </q-btn>
+
+        <q-btn to="/detito" id="button4" class="flex" >cartão debito</q-btn>
+      
         </div>
+        
       </div>
 
       <div class="fixed-bottom">
@@ -55,8 +63,9 @@
 <style>
 
 img{
-  width:  90%;
-  height: 90%;
+  width:  100%;
+  height: 100%;
+  display: block;
   
 }
 #text2{
@@ -97,27 +106,30 @@ img{
 .q-page{
   width: 96%;
 }
-#espaco{
-  width:  40wh;
-  height: 20hw;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  display: block; 
-}
+
 #button3{
-  width:  20vw;
-  height: 35vh;
-  margin-top: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: 15vw;
+  height: 30vh;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
   margin-bottom: 10px;
   color: white;
   text-align: center;
   font-size: 20px;
   display: block;
 }
-#tamanho{
-    width: auto;
+
+#button4{
+  width: 15vw;
+  height: auto;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: white;
+  background-color: #0ABBB5;
+  text-align: center;
+  display: block;
 }
+
 </style>

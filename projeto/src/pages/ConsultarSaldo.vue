@@ -8,7 +8,7 @@
          <img src="../assets/icons8-quadro-giratório-5-90.png"/>
         </div>
 
-        <q-btn to="/servicos" class="fixed-bottom">avancar</q-btn>
+        <q-btn to="/servicos">avancar</q-btn>
 
     </q-page>
   </template>

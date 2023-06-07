@@ -17,7 +17,7 @@
         <div class="col-1">
             <q-btn to="/pagamento" id="button2" >R$50,00</q-btn>
             <q-btn to="/pagamento" id="button2" >R$100,00</q-btn>
-            <q-btn to="/page2" id="button2" >Outro Valor</q-btn>
+            <q-btn to="/teclado" id="button2" >Outro Valor</q-btn>
         </div>
       </div>
 

@@ -84,6 +84,13 @@ const routes = [
       { path: '', component: () => import('pages/PaginaFinal.vue') }
     ]
   },
+  {
+    path: '/teclado',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/TecladoNumerico.vue') }
+    ]
+  },
   // Always leave this as last one,
   // but you can also remove it
   {
