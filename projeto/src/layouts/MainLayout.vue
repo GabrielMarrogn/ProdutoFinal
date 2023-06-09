@@ -1,16 +1,19 @@
 <template>
   <q-layout view="hHh lpr fFf">
 
-    <q-header id="topbottom">
-      
-     <div class="row justify-center">
-       <div class="row fixed-left col" id="sides"></div>
-       <div class="row  fixed-right col" id="sides"></div>
-     </div>
-    
+    <q-header id="topbottom" >
+      <div>
+        <p id="textheader" class="fixed-right">são paulo</p> <br>
+      </div>  
     </q-header>
       
     <q-page-container>
+      
+      <div class="row justify-center">
+       <div class="row fixed-left col" id="sides"></div>
+       <div class="row  fixed-right col" id="sides"></div>
+     </div>
+     
       <router-view />
     </q-page-container>
 
@@ -28,21 +31,27 @@
 <script>
 import { ref } from 'vue'
 
+
 export default {
   setup () {
-    
 
+    
     return {
       
     }
-  }
+  },
 }
 </script>
 
 <style>
+#textheader{
+  float: right;
+  color: black;
+}
 #sides{
   background-color: #0ABBB5;
-  height: 100%;
+  margin-top:3%;
+  height: 86%;
   width: 2%;
 }
 #topbottom{

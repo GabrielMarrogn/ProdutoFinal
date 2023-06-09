@@ -1,8 +1,19 @@
 <template class>
     <q-page class="absolute-center">
 
-      <div>
-        <h3 id="text">DIGITE UM VALOR </h3>
+      <div v-if="produto == 'bilhete'">
+        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
+        <h3 id="textCenter2">DIGITE UM VALOR </h3>
+      </div>
+
+      <div v-if="produto == 'top'">
+        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
+        <h3 id="textCenter2">DIGITE UM VALOR </h3>
+      </div>
+
+      <div v-if="produto == 'qrcode'" id="text">
+        <img id="fluxologo"  src="../assets/qr-code.png"/>
+        <h3 id="textCenter2">DIGITE UM VALOR </h3>
       </div>
 
       <div class="flex-center">
@@ -31,7 +42,7 @@
         <div class="row  flex-center">
             <q-btn id="buttonc" to="pagamento" >confirmar</q-btn>
             <q-btn id="buttona" >apagar</q-btn>
-            <q-btn id="buttonca" >cancelar</q-btn>
+            <q-btn id="buttonca" to="cotas" >cancelar</q-btn>
         </div>
 
       </div>
@@ -46,14 +57,28 @@
   
   <script>
   import { defineComponent } from 'vue'
+  import { AppStore } from 'src/stores/AppStore';
    
   export default defineComponent({
     name: 'TecladoNumerico',
-   
+    data(){
+      return{
+        produto: ""
+      }
+    },
+    created (){
+      this.produto = AppStore.produto
+    },
   })
   </script>
   
  <style>
+  #textCenter2{
+  text-align: center;
+  font-size: 40px;
+  font-style: bold;
+  margin-right: 6%; 
+}
  #buttonc{
   width:  7vw;
   height: 1vh;

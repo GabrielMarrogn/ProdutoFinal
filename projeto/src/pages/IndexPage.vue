@@ -6,7 +6,7 @@
 
   <div class="row flex-center">
     <div>
-    <q-btn  to="/insira"  id="button" @click="top" >
+    <q-btn  to="/insira"  id="button" class="flex" @click="top" >
           <img src="../assets/logo_top_preto.png"/>
     </q-btn>
 
@@ -16,7 +16,7 @@
     </div>
 
     <div>
-    <q-btn to="/insira" id="button" @click="qrcode">
+    <q-btn to="/insira" id="button" class="flex" @click="qrcode">
           <img src="../assets/qr-code.png"/>
     </q-btn>
 
@@ -26,7 +26,7 @@
     </div>
 
     <div>
-    <q-btn to="/insira" id="button" @click="bilhete">
+    <q-btn to="/insira" id="button" class="flex" @click="bilhete">
       <img src="../assets/Bilhete_Unico-logo.png"/>
     </q-btn>
     

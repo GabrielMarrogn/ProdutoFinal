@@ -1,8 +1,16 @@
 <template>
     <q-page class="absolute-center">
-        <div>
-        <h3 id="text">DINHEIRO SELECIONADO</h3>
-        </div>
+
+      <div v-if="produto == 'bilhete'">
+        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
+        <h3 id="textCenter"> DINHEIRO SELECIONADO </h3>
+      </div>
+      
+      <div v-if="produto == 'top'">
+        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
+        <h3 id="textCenter"> DINHEIRO SELECIONADO  </h3>
+      </div>
+
         <div>
             <h4 id="text">INSIRA AS CEDULAS</h4>
         </div>
@@ -26,14 +34,29 @@
   
   <script>
   import { defineComponent } from 'vue';
+  import { AppStore } from 'src/stores/AppStore';
   
   
   export default defineComponent({
-    name: 'DinheiroSelecionado'
+    name: 'DinheiroSelecionado',
+    data(){
+      return{
+        produto: ""
+      }
+    },
+    created (){
+      this.produto = AppStore.produto
+    },
   })
   </script>
   
   <style>
+  #fluxologo{
+  width: 5%;
+  height: 5%;
+  margin-left: 2%;
+  float: left;
+} 
   #voltar{
   width: 10vw;
   height: 1vh;
@@ -54,13 +77,22 @@
   float: right;
   
 }
-   .img{
+.img{
     height: 40%;
     width: 50%;
-   }
-   .q-page{
+}
+.q-page{
   width: 96%;
-  }
+}
+#textCenter{
+
+  font-size: 40px;
+  font-style: bold;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+}
   #text{
   text-align: center;
   font-size: 40px;

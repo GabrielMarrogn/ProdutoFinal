@@ -1,8 +1,17 @@
 <template>
     <q-page class="absolute-center">
-        <div>
-        <h3 id="text">CARTÃO SELECIONADO</h3>
-        </div>
+      <div>
+        <h3 v-if="produto == 'bilhete'" id="text"> <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/> DIGITE A SENHA </h3>
+      </div>
+      
+      <div>
+        <h3 v-if="produto == 'top'" id="text"> <img id="fluxologo"  src="../assets/logo_top_preto.png"/> DIGITE A SENHA </h3>
+      </div>
+
+      <div>
+        <h3 v-if="produto == 'qrcode'" id="text"> <img id="fluxologo"  src="../assets/qr-code.png"/> DIGITE A SENHA </h3>
+      </div>
+
         <div>
             <h4 id="text">DIGITE A SENHA</h4>
         </div>
@@ -23,14 +32,29 @@
   
   <script>
   import { defineComponent } from 'vue';
+  import { AppStore } from 'src/stores/AppStore';
   
   
   export default defineComponent({
-    name: 'DigiteSenha'
+    name: 'DigiteSenha',
+    data(){
+      return{
+        produto: ""
+      }
+    },
+    created (){
+      this.produto = AppStore.produto
+    },
   })
   </script>
   
   <style>
+  #fluxologo{
+  width: 5%;
+  height: 5%;
+  margin-left: 2%;
+  float: left;
+} 
   #voltar{
   width: 10vw;
   height: 1vh;

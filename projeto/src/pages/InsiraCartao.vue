@@ -2,15 +2,18 @@
     <q-page class="fixed-center">
 
       <div v-if="produto == 'top'">
-      <h3 id="text">CARTÃO TOP SELECIONADO</h3>
+        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
+      <h3 id="textCenter">CARTÃO TOP SELECIONADO</h3>
       </div>
     
       <div v-if="produto == 'bilhete'">
-      <h3 id="text">BILHETE UNICO SELECIONADO</h3>
+        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
+      <h3 id="textCenter">BILHETE UNICO SELECIONADO</h3>
       </div>
 
       <div v-if="produto == 'qrcode'">
-      <h3 id="text">QR-CODE SELECIONADO</h3>
+        <img id="fluxologo"  src="../assets/qr-code.png"/>
+      <h3 id="textCenter">QR-CODE SELECIONADO</h3>
       </div>
 
       <div class="fixed-center" v-if="produto == 'qrcode'">
@@ -21,19 +24,25 @@
       <img src="../assets/icons8-inserir-cartão-100.png"/>
       </div>
 
-      <div v-if="produto == 'top'" class="fixed-bottom">
+      <div v-if="produto == 'top'" class="fixed-bottom flex-center">
       <h3 id="text"> INSIRA O SEU CARTÃO TOP</h3>
       </div>
     
-      <div v-if="produto == 'bilhete'" class="fixed-bottom">
+      <div v-if="produto == 'bilhete'" class="fixed-bottom flex-center">
       <h3 id="text">INSIRA O SEU BILHETE UNICO</h3>
       </div>
 
-      <div v-if="produto == 'qrcode'" class="fixed-bottom">
+      <div v-if="produto == 'qrcode'" class="fixed-bottom flex-center">
       <h3 id="textq">OBS: APENAS ACEITAMOS CARTÃO DE DEBITO NO QRCODE</h3>
       </div>
 
+      <div v-if="produto == 'qrcode'">
+        <q-btn to="/servicos" >avancar</q-btn>
+      </div>
+
+      <div v-else>
       <q-btn to="/consulta" >avancar</q-btn>
+      </div>
 
       <div class="fixed-bottom">
       <q-btn id="voltar" to="/">Voltar</q-btn>
@@ -61,7 +70,13 @@
   </script>
   
   <style>
-  
+
+#fluxologo{
+  width: 5%;
+  height: 5%;
+  margin-left: 1%;
+  float: left;
+} 
 #voltar{
   width: 10vw;
   height: 1vh;
@@ -87,6 +102,12 @@
   text-align: center;
   font-size: 40px;
   font-style: bold; 
+}
+#textCenter{
+  text-align: center;
+  font-size: 40px;
+  font-style: bold;
+  margin-right: 7%; 
 }
 #textq{
   text-align: center;

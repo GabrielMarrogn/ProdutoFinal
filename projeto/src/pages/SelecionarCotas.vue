@@ -1,8 +1,19 @@
 <template class>
     <q-page class="absolute-center">
 
-      <div>
-        <h3 id="text">SELECIONE A OPÇÃO DESEJADA </h3>
+      <div v-if="produto == 'bilhete'">
+        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
+        <h3 id="textCenter">SELECIONE O VALOR </h3>
+      </div>
+      
+      <div v-if="produto == 'top'">
+        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
+        <h3 id="textCenter">SELECIONE O VALOR  </h3>
+      </div>
+
+      <div v-if="produto == 'qrcode'">
+        <img id="fluxologo"  src="../assets/qr-code.png"/>
+        <h3 id="textCenter">SELECIONE O VALOR  </h3>
       </div>
 
       <div class="row fixed-center">
@@ -30,14 +41,34 @@
   
   <script>
   import { defineComponent } from 'vue'
+  import { AppStore } from 'src/stores/AppStore';
    
   export default defineComponent({
     name: 'SelecionarCotas',
-   
+    data(){
+      return{
+        produto: ""
+      }
+    },
+    created (){
+      this.produto = AppStore.produto
+    },
   })
   </script>
   
  <style>
+ #textCenter{
+  text-align: center;
+  font-size: 40px;
+  font-style: bold;
+  margin-right: 8%; 
+}
+#fluxologo{
+  width: 5%;
+  height: 5%;
+  margin-left: 1%;
+  float: left;
+} 
 #button2{
   width:  20vw;
   height: 15vh;

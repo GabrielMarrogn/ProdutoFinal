@@ -1,8 +1,19 @@
 <template>
     <q-page class="absolute-center">
 
-      <div>
-        <h3 id="text">ESCOLHA A FORMA DE PAGAMENTO </h3>
+      <div v-if="produto == 'bilhete'">
+        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
+        <h3 id="textCenter">ESCOLHA A FORMA E PAGAMENTO </h3>
+      </div>
+      
+      <div v-if="produto == 'top'">
+        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
+        <h3 id="textCenter">ESCOLHA A FORMA E PAGAMENTO </h3>
+      </div>
+
+      <div v-if="produto == 'qrcode'">
+        <img id="fluxologo"  src="../assets/qr-code.png"/> 
+        <h3 id="textCenter">ESCOLHA A FORMA E PAGAMENTO </h3>
       </div>
 
       <div class="row flex-center"  v-if="produto == 'qrcode'">
@@ -45,7 +56,7 @@
   
   <script>
   import { defineComponent } from 'vue'
-  import { AppStore } from 'src/stores/AppStore'
+  import { AppStore } from 'src/stores/AppStore';
    
   export default defineComponent({
     name: 'FormaPagamento',
@@ -56,15 +67,20 @@
     },
     created (){
       this.produto = AppStore.produto
-    },
+    },  
   })
   </script>
   
-<style>
-
+ <style>
+#fluxologo{
+  width: 5%;
+  height: 5%;
+  margin-left: 2%;
+  float: left;
+} 
 img{
-  width:  100%;
-  height: 100%;
+  width:  95%;
+  height: 95%;
   display: block;
   
 }

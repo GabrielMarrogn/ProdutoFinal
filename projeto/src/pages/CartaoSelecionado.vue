@@ -1,8 +1,21 @@
 <template>
     <q-page class="absolute-center">
-        <div>
-        <h3 id="text">CARTÃO SELECIONADO</h3>
-        </div>
+      
+      <div v-if="produto == 'bilhete'">
+        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
+        <h3 id="textCenter1">DEBITO SELECIONADO </h3>
+      </div>
+      
+      <div v-if="produto == 'top'">
+        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
+        <h3 id="textCenter1">DEBITO SELECIONADO  </h3>
+      </div>
+
+      <div v-if="produto == 'qrcode'" id="text">
+        <img id="fluxologo"  src="../assets/qr-code.png"/> 
+        <h3 id="textCenter1">DEBITO SELECIONADO  </h3>
+      </div>
+
         <div>
             <h4 id="text">INSIRA O CARTÃO DE DEBITO</h4>
         </div>
@@ -23,15 +36,36 @@
   
   <script>
   import { defineComponent } from 'vue';
+  import { AppStore } from 'src/stores/AppStore';
   
   
   export default defineComponent({
-    name: 'CartaoSelecionado'
+    name: 'CartaoSelecionado',
+    data(){
+      return{
+        produto: ""
+      }
+    },
+    created (){
+      this.produto = AppStore.produto
+    },
   })
   </script>
   
   <style>
-  #voltar{
+   #textCenter1{
+  text-align: center;
+  font-size: 40px;
+  font-style: bold;
+  margin-right: 10%; 
+}
+#fluxologo{
+  width: 5%;
+  height: 5%;
+  margin-left: 1%;
+  float: left;
+} 
+#voltar{
   width: 10vw;
   height: 1vh;
   background-color: gray;

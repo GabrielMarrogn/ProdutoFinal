@@ -1,8 +1,19 @@
 <template>
     <q-page class="absolute-center">
 
-      <div>
-        <h3 v-if="produto == 'bilhete' || 'top'" id="text">SELECIONE A OPÇÃO DESEJADA </h3>
+      <div v-if="produto == 'bilhete'">
+        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
+        <h3 id="textCenter">SELECIONE A OPÇÃO DESEJADA </h3>
+      </div>
+      
+      <div v-if="produto == 'top'">
+        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
+        <h3 id="textCenter">SELECIONE A OPÇÃO DESEJADA </h3>
+      </div>
+
+      <div v-if="produto == 'qrcode'">
+        <img id="fluxologo"  src="../assets/qr-code.png"/>
+        <h3 id="textCenter">SELECIONE A OPÇÃO DESEJADA </h3>
       </div>
 
       <div class="row flex-center" id="tamanho" v-if="produto == 'bilhete'">
@@ -64,6 +75,18 @@
   </script>
   
  <style>
+ #textCenter{
+  text-align: center;
+  font-size: 40px;
+  font-style: bold;
+  margin-right: 8%; 
+}
+#fluxologo{
+  width: 5%;
+  height: 5%;
+  margin-left: 1%;
+  float: left;
+} 
 #button1{
   margin-top: 4%;
   width:  200px;
