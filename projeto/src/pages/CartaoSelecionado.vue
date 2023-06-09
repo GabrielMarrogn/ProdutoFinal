@@ -1,30 +1,22 @@
 <template>
-    <q-page class="absolute-center">
+    <q-page class="fixed-center">
       
-      <div v-if="produto == 'bilhete'">
-        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
-        <h3 id="textCenter1">DEBITO SELECIONADO </h3>
-      </div>
-      
-      <div v-if="produto == 'top'">
-        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
-        <h3 id="textCenter1">DEBITO SELECIONADO  </h3>
-      </div>
-
-      <div v-if="produto == 'qrcode'" id="text">
-        <img id="fluxologo"  src="../assets/qr-code.png"/> 
-        <h3 id="textCenter1">DEBITO SELECIONADO  </h3>
-      </div>
+      <div>
+        <img v-if="produto == 'qrcode'" id="fluxologo1"  src="../assets/qr-code.png"/>
+        <img v-if="produto == 'top'" id="fluxologo1"  src="../assets/logo_top_preto.png"/>
+        <img v-if="produto == 'bilhete'" id="fluxologo1"  src="../assets/Bilhete_Unico-logo.png"/>
+        <h3 id="textCenter7">DEBITO SELECIONADO </h3><br>
+      </div><br>
 
         <div>
-            <h4 id="text">INSIRA O CARTÃO DE DEBITO</h4>
+            <h4 id="text5" class="flex-center">INSIRA O CARTÃO DE DEBITO</h4>
         </div>
 
         <div class="fixed-center">
          <img src="../assets/icons8-cartão-100.png"/>
         </div>
         
-        <q-btn to="/processamento">avancar</q-btn>
+        <q-btn to="/processamento" class="">avancar</q-btn>
 
         <div class="fixed-bottom">
         <q-btn id="voltar" to="/pagamento">Voltar</q-btn>
@@ -53,18 +45,15 @@
   </script>
   
   <style>
-   #textCenter1{
-  text-align: center;
+   #textCenter7{
   font-size: 40px;
-  font-style: bold;
-  margin-right: 10%; 
+  font-style: bold; 
+  position: absolute;
+  margin-left: 35%;
+  width: 96%;
+
 }
-#fluxologo{
-  width: 5%;
-  height: 5%;
-  margin-left: 1%;
-  float: left;
-} 
+
 #voltar{
   width: 10vw;
   height: 1vh;
@@ -85,16 +74,16 @@
   float: right;
   
 }
-   .img{
+.img{
     height: 40%;
     width: 50%;
-   }
+}
    .q-page{
   width: 96%;
-  }
-  #text{
-  text-align: center;
+}
+  #text5{
   font-size: 40px;
   font-style: bold; 
+  margin-left: 30%;
   }
   </style>

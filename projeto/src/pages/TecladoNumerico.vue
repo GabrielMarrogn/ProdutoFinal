@@ -3,17 +3,17 @@
 
       <div v-if="produto == 'bilhete'">
         <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
-        <h3 id="textCenter2">DIGITE UM VALOR </h3>
+        <h3 id="textCenter">DIGITE UM VALOR </h3>
       </div>
 
       <div v-if="produto == 'top'">
         <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
-        <h3 id="textCenter2">DIGITE UM VALOR </h3>
+        <h3 id="textCenter">DIGITE UM VALOR </h3>
       </div>
 
       <div v-if="produto == 'qrcode'" id="text">
         <img id="fluxologo"  src="../assets/qr-code.png"/>
-        <h3 id="textCenter2">DIGITE UM VALOR </h3>
+        <h3 id="textCenter">DIGITE UM VALOR </h3>
       </div>
 
       <div class="flex-center">
@@ -73,11 +73,14 @@
   </script>
   
  <style>
-  #textCenter2{
-  text-align: center;
+#textCenter{
   font-size: 40px;
   font-style: bold;
-  margin-right: 6%; 
+  position: absolute;
+  left: 0; 
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
  #buttonc{
   width:  7vw;

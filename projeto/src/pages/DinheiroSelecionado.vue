@@ -1,26 +1,21 @@
 <template>
-    <q-page class="absolute-center">
-
-      <div v-if="produto == 'bilhete'">
-        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
-        <h3 id="textCenter"> DINHEIRO SELECIONADO </h3>
-      </div>
+    <q-page class="fixed-center">
       
-      <div v-if="produto == 'top'">
-        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
-        <h3 id="textCenter"> DINHEIRO SELECIONADO  </h3>
-      </div>
+      <div id="vamola">
+        <img id="fluxologo1" v-if="produto == 'bilhete'" src="../assets/Bilhete_Unico-logo.png"/>
+        <img id="fluxologo1" v-if="produto == 'top'" src="../assets/logo_top_preto.png"/>
+        <h3 id="textCenter6">DINHEIRO SELECIONADO</h3><br>
+      </div><br>
 
-        <div>
-            <h4 id="text">INSIRA AS CEDULAS</h4>
-        </div>
-
-        <div class="fixed-center">
+        <div >
+        <h3 id="text4">INSIRA AS CEDULAS</h3>
+         <div class="fixed-center">
          <img src="../assets/icons8-warning-96.png"/>
-        </div>
-        <div>
+         </div>
+        
             <h4 class="fixed-bottom" id="text">OBS: NOSSAS MAQUINAS NÃO DEVOLVEM TROCO</h4>
         </div>
+
 
         <q-btn to="/processamento">avancar</q-btn>
 
@@ -51,12 +46,14 @@
   </script>
   
   <style>
-  #fluxologo{
-  width: 5%;
-  height: 5%;
-  margin-left: 2%;
-  float: left;
-} 
+ #textCenter6{
+  font-size: 40px;
+  font-style: bold; 
+  position: absolute;
+  margin-left: 33%;
+  width: 96%;
+
+}
   #voltar{
   width: 10vw;
   height: 1vh;
@@ -65,7 +62,6 @@
   margin-bottom: 10px;
   margin-left: 5px;
   float: left;
-  
 }
 #sair{
   width: 10vw;
@@ -84,16 +80,8 @@
 .q-page{
   width: 96%;
 }
-#textCenter{
 
-  font-size: 40px;
-  font-style: bold;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-
-}
-  #text{
+  #text4{
   text-align: center;
   font-size: 40px;
   font-style: bold; 

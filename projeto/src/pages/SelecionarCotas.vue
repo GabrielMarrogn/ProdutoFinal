@@ -1,19 +1,19 @@
 <template class>
-    <q-page class="absolute-center">
+    <q-page class="fixed-center">
 
-      <div v-if="produto == 'bilhete'">
-        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
-        <h3 id="textCenter">SELECIONE O VALOR </h3>
+      <div v-if="produto == 'bilhete'" id="vamola">
+        <img id="fluxologo1"  src="../assets/Bilhete_Unico-logo.png"/>
+        <h3 id="textCenter4">SELECIONE O VALOR </h3>
       </div>
       
-      <div v-if="produto == 'top'">
-        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
-        <h3 id="textCenter">SELECIONE O VALOR  </h3>
+      <div v-if="produto == 'top'" id="vamola">
+        <img id="fluxologo1"  src="../assets/logo_top_preto.png"/>
+        <h3 id="textCenter4">SELECIONE O VALOR  </h3>
       </div>
 
-      <div v-if="produto == 'qrcode'">
-        <img id="fluxologo"  src="../assets/qr-code.png"/>
-        <h3 id="textCenter">SELECIONE O VALOR  </h3>
+      <div v-if="produto == 'qrcode'" id="vamola">
+        <img id="fluxologo1"  src="../assets/qr-code.png"/>
+        <h3 id="textCenter4">SELECIONE O VALOR  </h3>
       </div>
 
       <div class="row fixed-center">
@@ -57,17 +57,21 @@
   </script>
   
  <style>
- #textCenter{
-  text-align: center;
+#textCenter4{
   font-size: 40px;
-  font-style: bold;
-  margin-right: 8%; 
+  font-style: bold; 
+  position: absolute;
+  margin-left: 35%;
+  width: 96%;
+
 }
-#fluxologo{
+#fluxologo1{
   width: 5%;
   height: 5%;
   margin-left: 1%;
   float: left;
+  position: relative;
+ 
 } 
 #button2{
   width:  20vw;

@@ -1,20 +1,20 @@
 <template>
-    <q-page class="absolute-center">
-        <div v-if="produto == 'top'" >
-          <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
-        <h3 id="textCenter">CONSULTANDO SALDO</h3>
+    <q-page class="fixed-center">
+        <div v-if="produto == 'top'" id="vamola">
+          <img id="fluxologo1"  src="../assets/logo_top_preto.png"/>
+        <h3 id="textCenter2">CONSULTANDO SALDO</h3>
         </div>
 
-        <div v-if="produto == 'bilhete'">
-          <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
-        <h3 id="textCenter">CONSULTANDO SALDO</h3>
+        <div v-if="produto == 'bilhete'" id="vamola">
+          <img id="fluxologo1"  src="../assets/Bilhete_Unico-logo.png"/>
+        <h3 id="textCenter2">CONSULTANDO SALDO</h3>
         </div>
 
         <div class="fixed-center">
          <img src="../assets/icons8-quadro-giratório-5-90.png"/>
         </div>
 
-        <q-btn to="/servicos">avancar</q-btn>
+        <q-btn to="/servicos" class="fixed-bottom">avancar</q-btn>
 
     </q-page>
   </template>
@@ -38,16 +38,21 @@
   </script>
   
   <style>
-  #textCenter{
-  text-align: center;
+#textCenter2{
   font-size: 40px;
-  font-style: bold;
-  margin-right: 8%; 
+  font-style: bold; 
+  position: absolute;
+  margin-left: 34%;
+  width: 96%;
+
 }
-  #fluxologo{
+#fluxologo1{
   width: 5%;
   height: 5%;
+  margin-left: 1%;
   float: left;
+  position: relative;
+ 
 } 
   .img{
   height: 40%;
