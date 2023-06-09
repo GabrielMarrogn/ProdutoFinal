@@ -1,22 +1,14 @@
 <template>
-    <q-page class="absolute-center">
+    <q-page class="fixed-center">
 
-      <div v-if="produto == 'bilhete'">
-        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
-        <h3 id="textCenter">ESCOLHA A FORMA E PAGAMENTO </h3>
-      </div>
-      
-      <div v-if="produto == 'top'">
-        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
-        <h3 id="textCenter">ESCOLHA A FORMA E PAGAMENTO </h3>
+      <div id="vamola">
+        <img v-if="produto == 'bilhete'" id="fluxologo1" src="../assets/Bilhete_Unico-logo.png"/>
+        <img v-if="produto == 'qrcode'" id="fluxologo1"  src="../assets/qr-code.png"/>
+        <img v-if="produto == 'top'" id="fluxologo1"  src="../assets/logo_top_preto.png"/>
+        <h3 id="textCenter5">ESCOLHA A FORMA E PAGAMENTO </h3>
       </div>
 
-      <div v-if="produto == 'qrcode'">
-        <img id="fluxologo"  src="../assets/qr-code.png"/> 
-        <h3 id="textCenter">ESCOLHA A FORMA E PAGAMENTO </h3>
-      </div>
-
-      <div class="row flex-center"  v-if="produto == 'qrcode'">
+      <div class="row flex-center"  v-if="produto == 'qrcode'" id="bottumDC">
         <div>
             <q-btn to="/debito" id="button3" >
                 <img id="img" class="flex-center" src="../assets/icons8-cartão-100.png"/>
@@ -26,7 +18,7 @@
         </div>
       </div>
 
-      <div class="row flex-center"  v-else>
+      <div class="row flex-center"  id="bottumDC" v-else>
         <div>
         <q-btn to="/dinheiro" id="button3">
           <img id="img"  class="flex-center" src="../assets/icons8-dinheiro-90.png"/>
@@ -72,11 +64,21 @@
   </script>
   
  <style>
-#fluxologo{
+#textCenter5{
+  font-size: 40px;
+  font-style: bold; 
+  position: absolute;
+  margin-left: 26%;
+  width: 96%;
+
+}
+#fluxologo1{
   width: 5%;
   height: 5%;
-  margin-left: 2%;
+  margin-left: 1%;
   float: left;
+  position: relative;
+ 
 } 
 img{
   width:  95%;
@@ -146,6 +148,9 @@ img{
   background-color: #0ABBB5;
   text-align: center;
   display: block;
+}
+#bottumDC{
+  margin-top: 10%;
 }
 
 </style>
