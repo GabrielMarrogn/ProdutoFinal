@@ -18,35 +18,35 @@
 
       <div class="row flex-center" id="tamanho" v-if="produto == 'bilhete'">
     
-       <q-btn to="/cotas" id="button1" >Comun</q-btn>
+       <q-btn to="/cotas" id="button1" @click="comun">Comun</q-btn>
 
-       <q-btn to="/cotas" id="button1" >Estudante</q-btn>
+       <q-btn to="/cotas" id="button1" @click="estudanteB">Estudante</q-btn>
 
-       <q-btn to="/cotas" id="button1">Vale Transporte</q-btn>
+       <q-btn to="/cotas" id="button1" @click="vtB">Vale Transporte</q-btn>
 
-       <q-btn to="/cotas" id="button1">Compra Web</q-btn>
+       <q-btn to="/cotas" id="button1" @click="compraWeb">Compra Web</q-btn>
 
-       <q-btn to="/cotas" id="button1">Temporal</q-btn>
+       <q-btn to="/cotas" id="button1" @click="temporal">Temporal</q-btn>
 
       </div>
 
       <div class="row flex-center" id="tamanho" v-if="produto === 'top'" >
     
 
-       <q-btn to="/cotas" id="button1" >V.T</q-btn>
+       <q-btn to="/cotas" id="button1" @click="vt" >V.T</q-btn>
 
-       <q-btn to="/cotas" id="button1">Comun</q-btn>
+       <q-btn to="/cotas" id="button1" @click="comunTop">Comun</q-btn>
 
-       <q-btn to="/cotas" id="button1">Estudante</q-btn>
+       <q-btn to="/cotas" id="button1" @click="estudanteTop">Estudante</q-btn>
 
       </div>
 
       <div class="row flex-center" id="tamanho" v-if="produto === 'qrcode'" >
     
 
-       <q-btn to="/pagamento" id="button1" >1 Unitario</q-btn>
+       <q-btn to="/pagamento" id="button1" @click="unitario1" >1 Unitario</q-btn>
 
-       <q-btn to="/pagamento" id="button1">2 Unitarios</q-btn>
+       <q-btn to="/pagamento" id="button1" @click="unitario2" >2 Unitarios</q-btn>
 
       </div>
 
@@ -65,12 +65,61 @@
     name: 'SelecionarServicos',
     data(){
       return{
-        produto: ""
+        produto: "",
+        servicos: ""
       }
     },
     created (){
       this.produto = AppStore.produto
-    },  
+      this.servicos = AppStore.servico
+    }, 
+    methods: {
+     //top selecionado 
+    vt(){
+      this.servicos = "V.T"
+      AppStore.setServicos(this.servicos)
+    },
+    comunTop(){
+      this.servicos = "Comun Top"
+      AppStore.setServicos(this.servicos)
+    },
+    estudanteTop(){
+      this.servicos = "Estudante Top"
+      AppStore.setServicos(this.servicos)
+    },
+
+    // bilhete 
+    comun(){
+      this.servicos = "comun"
+      AppStore.setServicos(this.servicos)
+    },
+    estudanteB(){
+      this.servicos = "estudante B"
+      AppStore.setServicos(this.servicos)
+    },
+    vtB(){
+      this.servicos = "vale transporte"
+      AppStore.setServicos(this.servicos)
+    },
+    compraWeb(){
+      this.servicos = "compraWeb"
+      AppStore.setServicos(this.servicos)
+    },
+    temporal(){
+      this.servicos = "temporal"
+      AppStore.setServicos(this.servicos)
+    },
+
+    //QrCode
+    unitario1(){
+      this.servicos = "unitario1"
+      AppStore.setServicos(this.servicos)
+    },
+    unitario2(){
+      this.servicos = "unitario2"
+      AppStore.setServicos(this.servicos)
+    },
+    },
   })
   </script>
   

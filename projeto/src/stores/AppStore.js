@@ -4,11 +4,11 @@ export const useStore = defineStore('AppStore', {
   state: () => ({
     produto: "",
     servico: "",
+    cotas: "",
   }),
   actions: {
     setProduto(produto){
-        this.produto = produto;
-        console.log("salvou")
+        this.produto = produto
         console.log(produto)
     },
     getProduto(produto){
@@ -21,6 +21,11 @@ export const useStore = defineStore('AppStore', {
       console.log(servico)
     }
     },
+    setCotas(cotas){
+      this.cotas = cotas;
+      console.log(cotas)
+
+    }
   },
 );
 

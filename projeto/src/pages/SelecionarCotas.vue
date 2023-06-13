@@ -1,19 +1,10 @@
 <template class>
     <q-page class="fixed-center">
 
-      <div v-if="produto == 'bilhete'" id="vamola">
-        <img id="fluxologo1"  src="../assets/Bilhete_Unico-logo.png"/>
-        <h3 id="textCenter4">SELECIONE O VALOR </h3>
-      </div>
-      
-      <div v-if="produto == 'top'" id="vamola">
-        <img id="fluxologo1"  src="../assets/logo_top_preto.png"/>
-        <h3 id="textCenter4">SELECIONE O VALOR  </h3>
-      </div>
-
-      <div v-if="produto == 'qrcode'" id="vamola">
-        <img id="fluxologo1"  src="../assets/qr-code.png"/>
-        <h3 id="textCenter4">SELECIONE O VALOR  </h3>
+      <div>
+        <img v-if="produto == 'bilhete'" id="fluxologo1" src="../assets/Bilhete_Unico-logo.png"/>      
+        <img v-if="produto == 'top'" id="fluxologo1" src="../assets/logo_top_preto.png"/>
+        <h3 id="textCenter4">SELECIONE O VALOR</h3>
       </div>
 
       <div class="row fixed-center">
@@ -47,12 +38,40 @@
     name: 'SelecionarCotas',
     data(){
       return{
-        produto: ""
+        produto: "",
+        cotas: ""
       }
     },
     created (){
       this.produto = AppStore.produto
+
     },
+    methods: {
+    cinco(){
+      this.cotas = "cinco"
+      AppStore.setCotas(this.cotas)
+    },
+    dez(){
+      this.cotas = "dez"
+      AppStore.setCotas(this.cotas)
+    },
+    vinte(){
+      this.cotas = "vinte"
+      AppStore.setCotas(this.cotas)
+    },
+    cinquenta(){
+      this.cotas = "cinquenta"
+      AppStore.setCotas(this.cotas)
+    },
+    cem(){
+      this.cotas = "cem"
+      AppStore.setCotas(this.cotas)
+    },
+    outro(){
+      this.cotas = "outra valor"
+      AppStore.setCotas(this.cotas)
+    },
+    }
   })
   </script>
   

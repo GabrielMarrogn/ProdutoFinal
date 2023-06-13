@@ -1,22 +1,14 @@
-<template class>
-    <q-page class="absolute-center">
+<template>
+    <q-page class="fixed-center">
 
-      <div v-if="produto == 'bilhete'">
-        <img id="fluxologo"  src="../assets/Bilhete_Unico-logo.png"/>
-        <h3 id="textCenter">DIGITE UM VALOR </h3>
+      <div>
+        <img id="fluxologo1" v-if="produto == 'top'" src="../assets/logo_top_preto.png"/>
+        <img id="fluxologo1" v-if="produto == 'bilhete'" src="../assets/Bilhete_Unico-logo.png"/>
+        <h3 id="textCenter10">DIGITE UM VALOR </h3>
       </div>
 
-      <div v-if="produto == 'top'">
-        <img id="fluxologo"  src="../assets/logo_top_preto.png"/>
-        <h3 id="textCenter">DIGITE UM VALOR </h3>
-      </div>
-
-      <div v-if="produto == 'qrcode'" id="text">
-        <img id="fluxologo"  src="../assets/qr-code.png"/>
-        <h3 id="textCenter">DIGITE UM VALOR </h3>
-      </div>
-
-      <div class="flex-center">
+      <div class="flex-center" id="marringX">
+        <q-input ></q-input>
         <div class="row flex-center">
             <q-btn id="buttont" >1</q-btn>
             <q-btn id="buttont" >2</q-btn>
@@ -73,14 +65,23 @@
   </script>
   
  <style>
-#textCenter{
-  font-size: 40px;
-  font-style: bold;
-  position: absolute;
-  left: 0; 
-  right: 0;
+ .q-input{
+  width: 200px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
+ }
+ #marringX{
+  margin-top: 120px;
+ }
+#textCenter10{
+  font-size: 40px;
+  font-style: bold; 
+  position: absolute;
+  margin-left: 38%;
+  width: 96%;
+
 }
  #buttonc{
   width:  7vw;
